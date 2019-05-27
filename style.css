@@ -12,13 +12,39 @@ body{
 	letter-spacing: .1em;
 }
 
-.nav .title{
-	padding: 1rem;
+.subtitle{
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: .1em;
 }
 
 .header{
 	background-color: #1B89E2;
 	color: white;
+}
+
+.nav ul{
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: .1em;
+	padding: .5rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav li{
+	padding: 1em 0;
+}
+
+.nav li a{
+	color: white;
+	opacity: 0.5;
+	text-decoration: none;
+}
+
+.nav li a:hover{
+
+	opacity: 1;
 }
 
 .footer{
@@ -37,18 +63,37 @@ body{
 }
 
 .main .title{
+	margin-left: 1rem;
+}
+
+.main .subtitle{
 	margin-bottom: 1rem;
 	margin-left: 1rem;
 }
 
 .main p{
 	margin-left: 1rem;
+	line-height: 1.8em;
+}
+
+.hero{
+	max-width: 960px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.hero img{
+	width: 200px;
 }
 
 @media (min-width: 1040px){
 	.grid{
 		display: grid;
-		grid-template-columns: minmax(300px, 500px) repeat(3, 1fr);
+		grid-template-columns: minmax(200px, 1fr) repeat(3, 1fr);
+	}
+
+	.nav ul{
+		display: block;
 	}
 
 	.header{
