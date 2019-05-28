@@ -1,5 +1,14 @@
 body{
 	font: 1.1rem sans-serif;
+	background: url("../images/background_image.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1{
+	font-size: 1.5rem;
 }
 
 .grid-item{
@@ -7,20 +16,21 @@ body{
 }
 
 .title{
+	color: white;
 	text-transform: uppercase;
 	font-weight: bold;
 	letter-spacing: .1em;
 }
 
 .subtitle{
+	color: white;
 	text-transform: uppercase;
 	font-weight: bold;
 	letter-spacing: .1em;
 }
 
 .header{
-	background-color: #1B89E2;
-	color: white;
+	background-color: #0a0b0f;
 }
 
 .nav ul{
@@ -29,7 +39,7 @@ body{
 	letter-spacing: .1em;
 	padding: .5rem;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 .nav li{
@@ -38,13 +48,14 @@ body{
 
 .nav li a{
 	color: white;
-	opacity: 0.5;
+	opacity: 0.7;
 	text-decoration: none;
 }
 
 .nav li a:hover{
 
 	opacity: 1;
+	transition: all 0.2s ease-in-out;
 }
 
 .footer{
@@ -52,7 +63,7 @@ body{
 	   bottom:0px;
 	   width:100%;
 
-	background-color: #333;
+	background-color: #62666f;
 }
 
 .footerimgs{
@@ -64,15 +75,32 @@ body{
 	width: 50%;
 }
 
-.footerimgs img{
+.footerimgs a{
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.footerimgs img{
+
 	width: 50px;
 	height: 50px;
+	opacity: 0.5;
+
+
+}
+
+.footerimgs img:hover{
+	opacity: 1;
+	transition: all 0.5s ease-in-out;
+	transform:scale(1.5,1.5) rotate(15deg);
 }
 
 .main{
-	background-color: #F7CB78;
+	padding-left: 5rem;
+	padding-right: 5rem;
+
+	padding-bottom: 20rem;
+	font-family: "Roboto", sans-serif;
 }
 
 .main .title{
@@ -80,11 +108,12 @@ body{
 }
 
 .main .subtitle{
-	margin-bottom: 1rem;
+	margin-bottom: 5rem;
 	margin-left: 1rem;
 }
 
 .main p{
+	color: white;
 	margin-left: 1rem;
 	line-height: 1.8em;
 }
@@ -93,16 +122,17 @@ body{
 	max-width: 960px;
 	margin: 0 auto;
 	text-align: center;
+	font-family: "Slabo", serif;
 }
 
 .hero img{
 	width: 200px;
 }
 
-@media (min-width: 1040px){
+@media (min-width: 800px){
 	.grid{
 		display: grid;
-		grid-template-columns: minmax(200px, 1fr) repeat(3, 1fr);
+		grid-template-columns: minmax(220px, .7fr) repeat(3, 1fr);
 	}
 
 	.nav ul{
@@ -118,9 +148,16 @@ body{
 		grid-column: 2 / span 3;
 		grid-row: 1 / span 1;
 	}
+}
 
-	.footer{
-		grid-column: span 4;
-		grid-row: 9;
-	}
+@font-face {
+  font-family: 'Roboto';
+  font-display: auto;
+  src: local('Roboto-Regular'), url("fonts/Roboto-Regular.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'Slabo';
+  font-display: auto;
+  src: local('Slabo27px-Regular'), url(fonts/Slabo27px-Regular.woff2) format('woff2');
 }
